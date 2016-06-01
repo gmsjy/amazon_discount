@@ -9,6 +9,6 @@ amazon = "https://www.amazon.cn/gp/feature.html/ref=sa_menu_kindle_l3_f126758?ie
 def getInfo(URL):
     html = urlopen(URL)
     data = html.read()
-    soup = BeautifulSoup(data)
+    soup = BeautifulSoup(data,"lxml")
     dicounts = soup.findAll(attrs={"class": "gridProductContainer"})
 
